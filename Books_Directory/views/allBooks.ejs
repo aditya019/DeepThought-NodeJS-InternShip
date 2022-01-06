@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Books</title>
+</head>
+<body>
+    <h1>All Books in the Repository</h1>
+    <h3><button><a href="/addBook">Add New Book</a></button></h3>
+    <ol>
+        <% for( let index = 0; index < books.length; index++ ) { %>
+        <li><%= books[index].title %> by  <%= books[index].author %> <a href="/book/<%=books[index]._id%>">[i]</a>  </li>
+        <% } %>
+    </ol>
+</body>
+</html>

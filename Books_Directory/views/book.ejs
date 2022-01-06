@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= bookSearched.title %> </title>
+</head>
+<body>
+    <h1><%= bookSearched.title %> </h1>
+    <h4>by</h4>
+    <h2><%= bookSearched.author %> </h2>
+    <h5><%= bookSearched.description %> </h5>
+    <button><a href="/editBook/<%=bookSearched._id%>">Edit Book</a></button><br>
+    <form action="/deleteBook/<%=bookSearched._id%>?_method=DELETE" method="post">
+        <button type="submit">Delete</button>
+    </form>
+    <button><a href="/">All Books</a></button>
+
+</body>
+</html>
